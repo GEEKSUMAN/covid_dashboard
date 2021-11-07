@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const Dashboard = require('../models/dashboard')
+const Users = require('../models/dashboard')
 
 
 router.get('/', async(req,res) => {
     try{
-           const users = await Dashboard.find()
+           const users = await Users.find()
            res.json(users)
     }catch(err){
         res.send('Error ' + err)
@@ -14,7 +14,7 @@ router.get('/', async(req,res) => {
 
 router.get('/:id', async(req,res) => {
     try{
-           const user = await Dashboard.findById(req.params.id)
+           const user = await Users.findById(req.params.id)
            res.json(user)
     }catch(err){
         res.send('Error ' + err)
@@ -23,7 +23,7 @@ router.get('/:id', async(req,res) => {
 
 
 router.post('/', async(req,res) => {
-    const user = new Dashboard({
+    const user = new Users({
         name: req.body.name,
         tech: req.body.tech,
         sub: req.body.sub
@@ -39,9 +39,9 @@ router.post('/', async(req,res) => {
 
 router.patch('/:id',async(req,res)=> {
     try{
-        const user = await Dashboard.findById(req.params.id) 
+        const user = await Users.findById(req.params.id) 
         user.sub = req.body.sub
-        const a1 = await Dashboard.save()
+        const a1 = await Users.save()
         res.json(a1)   
     }catch(err){
         res.send('Error')
