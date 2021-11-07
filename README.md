@@ -1,2 +1,3 @@
-# covid_dashboard
-a covid19 tracker dashboard
+# Covid 19 Dashboard
+
+a covid19 tracker dashboard with Chatbot

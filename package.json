@@ -1,0 +1,27 @@
+{
+  "name": "covid_dashboard",
+  "version": "1.0.0",
+  "description": "a covid19 tracker dashboard with chat bot",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GEEKSUMAN/covid_dashboard.git"
+  },
+  "author": "SumanMaji@sherspect",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GEEKSUMAN/covid_dashboard/issues"
+  },
+  "homepage": "https://github.com/GEEKSUMAN/covid_dashboard#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^4.1.4",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
