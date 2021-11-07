@@ -41,7 +41,9 @@ router.patch('/:id',async(req,res)=> {
     try{
         const user = await Users.findById(req.params.id) 
         user.sub = req.body.sub
-        const a1 = await Users.save()
+        user.name= req.body.name
+        user.tech= req.body.tech
+        const a1 = await user.save()
         res.json(a1)   
     }catch(err){
         res.send('Error')
